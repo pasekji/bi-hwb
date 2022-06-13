@@ -1,0 +1,44 @@
+// test my applet
+establish_context
+enable_trace
+enable_timer
+card_connect
+// select
+send_apdu -sc 0 -APDU 00A40400080102030405060809	
+// zkoušíme zapsat data, ale není ověřený PIN
+send_apdu -sc 0 -APDU 8001000003A1A2A37F
+// vypíšeme jméno vlastníka, ověřený PIN není třeba
+send_apdu -sc 0 -APDU 800000000014
+// chceme vypsat data, ale není ověřený PIN
+send_apdu -sc 0 -APDU 800200000003
+// ověření PIN, PIN je správný
+send_apdu -sc 0 -APDU 8020000004313233347F
+// zápis dat, PIN je již ověřen
+send_apdu -sc 0 -APDU 8001000003A1A2A37F
+// úspěšné šifrování
+send_apdu -sc 0 -APDU 80420000100102030405060708090A0B0C0D0E0F1020
+// šifrování se špatnou délkou
+send_apdu -sc 0 -APDU 804200000F02030405060708090A0B0C0D0E0F1020
+// úspěšné dešifrování
+send_apdu -sc 0 -APDU 8044000020a10594771bc2f350c2ec460fb93f9ddb786ba62a0263b153555e96398e16f48a10
+// špatné dešifrování se špatným zarovnáním
+send_apdu -sc 0 -APDU 804400001F0594771bc2f350c2ec460fb93f9ddb786ba62a0263b153555e96398e16f48a10
+// neúspěšné dešifrování se špatnými daty
+send_apdu -sc 0 -APDU 8044000020a10594771bc2f350c2ec460fb93f9ddb786ba62a0263b153555e96398e26f48a10
+// výpis jména vlastníka
+send_apdu -sc 0 -APDU 800000000014
+// vypsání dat
+send_apdu -sc 0 -APDU 800200000003
+// špatná CLA
+send_apdu -sc 0 -APDU 900200000003
+// špatná INS
+send_apdu -sc 0 -APDU 800300000003
+// snažíme se zapsat více dat než můžeme
+send_apdu -sc 0 -APDU 8001000016a1a2a3a1a2a3a1a2a3a1a2a3a1a2a3a1a2a3a1a2a3a17F
+// chceme vypsat více dat, než máme uloženo
+send_apdu -sc 0 -APDU 800200000005
+//...
+
+card_disconnect
+release_context
+

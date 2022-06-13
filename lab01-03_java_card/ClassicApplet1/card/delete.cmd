@@ -1,0 +1,1 @@
+c:\java_card\gp.exe --delete 01020304050608

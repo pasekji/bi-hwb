@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    .data-table {
+        border-collapse: collapse;
+    }
+    .border-top {
+        border-top: 1px solid #000;
+    }
+    .border-bottom {
+        border-bottom: 1px solid #000;
+    }
+    .border-left {
+        border-left: 1px solid #000;
+    }
+    .border-right {
+        border-right: 1px solid #000;
+    }
+</style>
+
+<table class="data-table">
+    <tr>
+        <th class="border-top border-bottom border-left border-right">Varianta</th>
+        <th class="border-top border-bottom border-right">1M iterac&iacute;</th>
+        <th class="border-top border-bottom border-right">10M iterac&iacute;</th>
+        <th class="border-top border-bottom border-right">Procesor</th>
+        <th class="border-top border-bottom border-right">OS</th>
+        <th class="border-top border-bottom border-right">P&#345;eklada&#269;</th>
+        <th class="border-top border-bottom border-right">P&#345;ep&iacute;na&#269;e</th>
+    </tr>
+    <tr>
+        <td class="border-left border-right">aestest5_optimized_no_tbox.cpp</td>
+        <td class="border-right">346ms</td>
+        <td class="border-right">3300ms</td>
+        <td class="border-right">Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz</td>
+        <td class="border-right">macOS 11.6</td>
+        <td class="border-right">g++</td>
+        <td class="border-right">-Ofast</td>
+    </tr>
+    <tr>
+        <td class="border-left border-right">aestest5_optimized_with_tbox.cpp</td>
+        <td class="border-right">111ms</td>
+        <td class="border-right">1064ms</td>
+        <td class="border-right">Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz</td>
+        <td class="border-right">macOS 11.6</td>
+        <td class="border-right">g++</td>
+        <td class="border-right">-Ofast</td>
+    </tr>
+    <tr>
+        <td class="border-left border-right">aestest6_ni.cpp</td>
+        <td class="border-right">26ms</td>
+        <td class="border-right">253ms</td>
+        <td class="border-right">Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz</td>
+        <td class="border-right">macOS 11.6</td>
+        <td class="border-right">g++</td>
+        <td class="border-right">-Ofast</td>
+    </tr>
+    <tr>
+        <td class="border-left border-right">aestest6_ni_on_the_fly.cpp</td>
+        <td class="border-right">28ms</td>
+        <td class="border-right">252ms</td>
+        <td class="border-right">Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz</td>
+        <td class="border-right">macOS 11.6</td>
+        <td class="border-right">g++</td>
+        <td class="border-right">-Ofast</td>
+    </tr>
+    <tr>
+        <td class="border-left border-right">aestest5_optimized_no_tbox.cpp</td>
+        <td class="border-right">4993ms</td>
+        <td class="border-right">45877ms</td>
+        <td class="border-right">Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz</td>
+        <td class="border-right">macOS 11.6</td>
+        <td class="border-right">g++</td>
+        <td class="border-right">-</td>
+    </tr>
+    <tr>
+        <td class="border-left border-right">aestest5_optimized_with_tbox.cpp</td>
+        <td class="border-right">1423ms</td>
+        <td class="border-right">13101ms</td>
+        <td class="border-right">Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz</td>
+        <td class="border-right">macOS 11.6</td>
+        <td class="border-right">g++</td>
+        <td class="border-right">-</td>
+    </tr>
+    <tr>
+        <td class="border-left border-right">aestest6_ni.cpp</td>
+        <td class="border-right">81ms</td>
+        <td class="border-right">777ms</td>
+        <td class="border-right">Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz</td>
+        <td class="border-right">macOS 11.6</td>
+        <td class="border-right">g++</td>
+        <td class="border-right">-</td>
+    </tr>
+    <tr>
+        <td class="border-bottom border-left border-right">aestest6_ni_on_the_fly.cpp</td>
+        <td class="border-bottom border-right">231ms</td>
+        <td class="border-bottom border-right">2261ms</td>
+        <td class="border-bottom border-right">Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz</td>
+        <td class="border-bottom border-right">macOS 11.6</td>
+        <td class="border-bottom border-right">g++</td>
+        <td class="border-bottom border-right">-</td>
+    </tr>
+</table>
+
+</body>
+</html>
